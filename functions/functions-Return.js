@@ -53,3 +53,34 @@ function rectangleArea(width, height) {
   console.log(totalCost);
 
 
+  // function expressions
+
+  const plantNeedsWater = function(day) {
+    if(day === 'Wednesday') {
+    return true;
+  } else {
+    return false;
+    }
+  };
+  
+  plantNeedsWater('Tuesday');
+  
+  console.log(plantNeedsWater('Tuesday'));
+
+  // Arrow Function
+
+  const rectangleArea = (width, height) => {
+    let area = width * height;
+    return area;
+  };
+
+  
+  const plantNeedsWater = (day) => {
+    if (day === 'Wednesday') {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
+
