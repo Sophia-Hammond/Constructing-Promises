@@ -83,4 +83,8 @@ function rectangleArea(width, height) {
     }
   };
 
+  // Concise Body Arrow Functions
+
+  const plantNeedsWater = day => day === 'Wednesday' ? true : false;
+
 
