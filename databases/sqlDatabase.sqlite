@@ -39,4 +39,68 @@ FROM movies
 WHERE name LIKE 'Se_en';
 
 
+The percentage sign % is another wildcard character that can be used with 
+Preview: Docs Loading link description
+LIKE
+.
+
+// This statement filters the result set to only include movies
+// with names that begin with the letter ‘A’:
+
+SELECT * 
+FROM movies
+WHERE name LIKE 'A%';
+
+
+// IS NULL _ IS NOT NULL 
+
+SELECT name
+FROM movies 
+WHERE imdb_rating IS NOT NULL;
+
+// will show result of movie names without a rating
+SELECT name 
+FROM movies
+WHERE imdb_rating IS NULL;
+
+
+// BETWEEN
+
+SELECT *
+FROM movies
+WHERE year BETWEEN 1990 AND 1999;
+
+
+SELECT *
+FROM movies
+WHERE name BETWEEN 'A' AND 'J';
+
+
+
+SELECT *
+FROM movies
+WHERE year BETWEEN '1970' AND '1979' 
+
+// AND
+SELECT * 
+FROM movies
+WHERE year BETWEEN 1990 AND 1999
+   AND genre = 'romance';
+
+   SELECT *
+   FROM movies
+   WHERE year BETWEEN 1970 AND 1979
+     AND imdb_rating > 8;
+
+     
+     SELECT *
+     FROM movies
+     WHERE year < 1985
+        AND genre = 'horror';
+
+// OR
+
+
+
+
 
