@@ -1,0 +1,42 @@
+//SELECT pulls the genre collum from the movies data
+//DISTINCT makes sure it gets no copys 
+// FROM selects the data name 
+
+SELECT DISTINCT genre
+FROM movies; 
+
+// same thing but gets the year collum from the movie data
+
+SELECT DISTINCT year
+FROM movies;
+
+// How does it work?
+
+// The WHERE clause filters the result set to only include rows where the following condition is true.
+// imdb_rating > 8 is the condition. Here, only rows with a value greater than 8 in the imdb_rating column will be returned.
+// The > is an operator. Operators create a condition that can be evaluated as either true or false.
+
+
+
+SELECT *
+FROM movies
+WHERE imdb_rating > 8;
+
+
+SELECT *
+FROM movies
+WHERE imdb_rating < 5;
+
+SELECT *
+FROM movies
+WHERE year > 2014;
+
+
+// LIKE
+
+SELECT * 
+FROM movies
+WHERE name LIKE 'Se_en';
+
+
+
