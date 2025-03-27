@@ -1,4 +1,5 @@
-// else if statment
+// if else statment
+// program that takes a students score (0-100) and returns their letter grade
 
 function calculateGrade(score) {
     if (score >= 90 && score <= 100) {
