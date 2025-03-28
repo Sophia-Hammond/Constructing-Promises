@@ -100,6 +100,35 @@ WHERE year BETWEEN 1990 AND 1999
 
 // OR
 
+SELECT *
+FROM movies
+WHERE year > 2014
+   OR genre = 'action';
+
+   SELECT *
+   FROM movies
+   WHERE genre = 'romance';
+      OR genre = 'action';
+
+
+// ORDER BY alphabet or numerically
+SELECT *
+FROM movies
+ORDER BY name;
+
+
+//LIMIT - LIMITS AMOUNT OF RESULTS THAT COMES BK 
+SELECT *
+FROM movies
+LIMIT 10;
+
+
+// TOP 3 RATED MOVIES
+
+SELECT * // SELECTS ALL
+FROM movies; // FROM MOVIE DATA
+ORDER BY imdb_rating DESC; // ORDERS THEM BY RATINGS
+LIMIT 3; // LIMITS THE RESULT TO 3 GIVING THE TOP 3 RATED MOVIES
 
 
 
