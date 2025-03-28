@@ -140,3 +140,35 @@ SELECT name,
 FROM movies;
 
 
+SELECT name,
+ CASE
+ WHEN genre = 'romance' THEN 'Chill'
+ WHEN genre = 'comedy' THEN 'Chill'
+ ELSE 'Intense'
+ END AS 'Mood'
+ FROM movies;
+
+ //SUM - gives result of amount of files in a column
+ SELECT SUM(downloads) // how many items are in the colum downloads
+ FROM fake_apps;
+
+
+ // max() & min() functions that return highest and lowest value 
+
+ SELECT MIN(downloads) // least popular app has 1387 downloads
+ FROM fake_apps;
+
+ SELECT MAX(downloads) // most popular app has 31,090 downloads
+ FROM fake_apps;
+
+ // AVG() avarage value of selected column
+
+ SELECT AVG(downloads)
+ FROM fake_apps; 
+
+
+
+
+
+
+
