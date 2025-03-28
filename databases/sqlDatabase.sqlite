@@ -166,7 +166,67 @@ SELECT name,
  SELECT AVG(downloads)
  FROM fake_apps; 
 
+ SELECT AVG(price)
+ FROM fake_apps;
+// avrage price of a app 
 
+// ROUND()
+
+SELECT name, ROUND(price, 0)
+FROM fake_apps;
+
+SELECT ROUND(AVG(PRICE), 2)
+FROM fake_apps;
+
+// GROUP BY 1
+
+SELECT price, COUNT(*) 
+FROM fake_apps
+WHERE downloads > 20000
+GROUP BY price;
+
+
+SELECT category, SUM(downloads)
+FROM fake_apps
+GROUP BY category;
+
+//GROUP BY 2
+
+SELECT category, 
+   price,
+   AVG(downloads)
+FROM fake_apps
+GROUP BY 1, 2;
+// pull column 1&2
+
+//having 
+
+SELECT year,
+   genre,
+   COUNT(name)
+FROM movies
+GROUP BY 1, 2
+HAVING COUNT(name) > 10;
+
+// to limit the results of a query based on values of the individual rows, use WHERE.
+// to limit the results of a query based on an aggregate property, use HAVING.
+
+SELECT price, 
+   ROUND(AVG(downloads)),
+   COUNT(*)
+FROM fake_apps
+GROUP BY price
+HAVING COUNT(*) > 10;
+
+
+ //COUNT() count the number of rows
+ //SUM() the sum of the values in a column
+ //MAX() MIN()the largest/smallest value
+ //AVG()the average of the values in a column
+ //ROUND()round the values in the column
+ /* GROUP BY -is a clause used with aggregate functions 
+ to combine data from one or more columns */
+ // HAVING - limit the result of a query based on an aggregate property
 
 
 
