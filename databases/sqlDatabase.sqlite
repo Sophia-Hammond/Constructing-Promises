@@ -126,10 +126,17 @@ LIMIT 10;
 // TOP 3 RATED MOVIES
 
 SELECT * // SELECTS ALL
-FROM movies; // FROM MOVIE DATA
-ORDER BY imdb_rating DESC; // ORDERS THEM BY RATINGS
+FROM movies // FROM MOVIE DATA
+ORDER BY imdb_rating DESC // ORDERS THEM BY RATINGS
 LIMIT 3; // LIMITS THE RESULT TO 3 GIVING THE TOP 3 RATED MOVIES
 
 
+SELECT name,
+ CASE
+  WHEN imdb_rating > 8 THEN 'Fantastic'
+  WHEN imdb_rating > 6 THEN 'Poorly Received'
+  ELSE 'Avoid at All Costs'
+ END AS 'Review'
+FROM movies;
 
 
