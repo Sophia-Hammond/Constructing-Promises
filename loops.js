@@ -35,3 +35,42 @@ if (score >= 90) {
 } else {
     console.log("Grade: F");
 }
+
+
+const express = require("express");
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+// Middleware
+app.use(express.json());
+
+// Routes
+app.get("/", (req, res) => {
+    res.send("Hello, World!");
+});
+
+// Start Server
+app.listen(PORT, () => {
+    console.log(`Server running on port ${PORT}`);
+});
+
+
+const axios = require("axios");
+const cheerio = require("cheerio");
+
+async function scrapeWebsite(url) {
+    try {
+        const { data } = await axios.get(url);
+        const $ = cheerio.load(data);
+
+
+        $("h1, h2, h3").each((i, el) => {
+            console.log($(el).text().trim());
+        });
+
+    } catch (error) {
+        console.error("Error scraping website:", error);
+    }
+}
+
+scrapeWebsite("https://example.com");
